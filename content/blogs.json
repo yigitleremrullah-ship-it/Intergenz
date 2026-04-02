@@ -1,32 +1,52 @@
 {
   "posts": [
     {
-      "title": "Geleceğin Arayüz Tasarım Trendleri",
-      "summary": "Glassmorphism, dark mod ve mikro animasyonların kullanıcı deneyimine etkisini inceliyoruz.",
+      "id": "1",
+      "date": "2026-04-10T10:00:00Z",
+      "title": "Web Tasarım Nedir? Sadece \"Güzellik\" mi?",
+      "summary": "Web tasarımı, dijital dünyadaki mağaza vitrinidir ancak sadece renklerden ibaret değildir. Kod kalitesi ve hızın önemi.",
       "author": "Emrullah Yiğitler",
-      "date": "2026-04-02T10:00:00Z",
-      "thumbnail": ""
+      "content": "<h2>Web Tasarımı Bir Sanat mı Yoksa Bilim mi?</h2><p>Web tasarımı, bir işletmenin dijital dünyadaki mağaza vitrinidir. Çoğu insan için iyi bir web tasarımı sadece göze hoş gelen renkler ve resimlerden ibarettir. Ancak gerçekte profesyonel bir web tasarımı, sanat ve yazılım biliminin kusursuz birleşimidir.</p><h2>Temiz Kod: Arama Motorlarının Dili</h2><p>Arka plandaki temiz kod, sitenin Google tarafından sevilmesini sağlar. Karmakarışık ve optimize edilmemiş bir kod dizilimi, sitenin Google botları tarafından zor okunmasına ve listelerde (SEO) geriye düşmenize neden olur.</p><div class=\"cta-in-post\"><h4>Hemen Rakiplerinizin Önüne Geçin</h4><p>Next.js mimarisine sahip uçak hızında bir site ile SEO skorunuzu zirveye taşıyalım.</p><a href=\"#contact\" class=\"btn-primary btn-close-from-post\">Projemi Başlat</a></div><h2>Hız ve Performans: Kritik 2 Saniye</h2><p>Yapılan araştırmalara göre 2 saniyeden geç açılan bir site, müşterinin kapıdan dönmesidir (Bounce Rate). Ziyaretçilerin %53'ü 3 saniyede açılmayan siteleri kalıcı olarak terk ediyor. Bu nedenle hız sadece bir lüks değil, müşteri kazanımı için bir zorunluluktur.</p><h2>Responsive (Mobil) Tasarım Hayat Kurtarır</h2><p>Sitenin telefonda, tablette ve masaüstünde kusursuz görünmesi tartışılmaz bir kuraldır. Alışveriş hacminin %80'inin mobilden döndüğü günümüzde, tasarımın parmak dostu UX barındırması şarttır.</p><h2>Intergenz Farkı</h2><p>Biz sadece \"tasarım\" yapmıyoruz; Next.js teknolojisiyle uçak hızında, SEO uyumlu ve satışa entegre dijital varlıklar inşa ediyoruz.</p>"
     },
     {
-      "title": "İşletmeniz İçin Hangi Web Altyapısı Uygun?",
-      "summary": "Hazır sistemler ve özel yazılım arasındaki farklar: Doğru seçimi nasıl yaparsınız?",
-      "author": "Intergenz Ekibi",
-      "date": "2026-03-15T14:30:00Z",
-      "thumbnail": ""
-    },
-    {
-      "title": "E-Ticarette Satış Artıran UX Sırları",
-      "summary": "Sepette terk oranlarını azaltan ve yatırım getirisini (ROI) patlatan zekice tasarlanmış kullanıcı deneyimi yöntemleri.",
+      "id": "2",
+      "date": "2026-04-12T14:30:00Z",
+      "title": "Marka Tasarımı Nedir? Logonuz Sizi Tanıtıyor mu?",
+      "summary": "Marka tasarımı, bir şirketin karakteridir. Logo ise bu karakterin sadece yüzüdür. Marka kimliğinin detayları.",
       "author": "Emrullah Yiğitler",
-      "date": "2026-01-20T09:15:00Z",
-      "thumbnail": ""
+      "content": "<h2>Marka Kimliği Logonun Ötesindedir</h2><p>Marka tasarımı (Brand Identity), bir şirketin konuşma şeklidir, duruşudur ve karakteridir. Logo ise bu karakterin sadece yüzüdür. Markanızın ses tonunu sadece görsel ile aktarmanız imkansızdır.</p><h2>Tipografi: Karakterin Yazıya Dökülmesi</h2><p>Seçtiğiniz yazı tipi güven mi veriyor yoksa eğlence mi? Hukuk büroları sert serif fontları tercih ederken, startuplar oval ve dinamik sans-serif fontları tercih eder. Bu basit bir estetik kararı değil, psikolojik bir algı yönetimidir.</p><h2>Renk Psikolojisi</h2><p>Renklerin dili evrenseldir. Mavi; güven, uzmanlık ve kararlılık (Fintech markaları düşünün) demektir. Turuncu ve kırmızı ise enerji, aciliyet ve iştah (E-ticaret ve Gıda) demektir. Yanlış renk seçimi hedef kitlenize çok farklı bir mesaj gönderebilir.</p><h2>Görsel Dilin Bütünlüğü</h2><p>Sosyal medya paylaşımlarından antetli kağıdınıza ve fatura şablonunuza kadar her şeyin aynı dili konuşması gerekir. Bütünlük sağlanan bir görsel dil, profesyonelliğin en saf göstergesidir.</p><div class=\"cta-in-post\"><h4>Kurumunuzun Kimliğini Yeniden Keşfedin</h4><p>Global standartlarda logo ve kurumsal kimlik yönergeleri oluşturmak için uzman ekibimizle tanışın.</p><a href=\"#contact\" class=\"btn-outline btn-close-from-post\">Danışmanlık Al</a></div><h2>Sonuç</h2><p>Doğru bir marka tasarımı, reklam maliyetlerinizi düşürür çünkü akılda kalıcılığı (Brand Recall) artırır.</p>"
     },
     {
-      "title": "Web Siteleri İçin Core Web Vitals",
-      "summary": "Sayfa yüklenme hızının SEO performansına etkisi nedir? Sitenizin PageSpeed notunu nasıl %100 yaparsınız?",
-      "author": "Intergenz Ekibi",
-      "date": "2025-12-05T16:45:00Z",
-      "thumbnail": ""
+      "id": "3",
+      "date": "2026-04-15T09:15:00Z",
+      "title": "UI ve UX Arasındaki Fark: İkisine de Neden İhtiyacınız Var?",
+      "summary": "UI (Önyüz) ve UX (Kullanıcı Deneyimi) kavramları sıklıkla birbirine karıştırılır. İş dönüşümlerine etkisi.",
+      "author": "Emrullah Yiğitler",
+      "content": "<h2>İki Kardeş Disiplin: UI ve UX</h2><p>Harika görünen ama butonu bulunamayan bir site, benzini olmayan bir lüks araba gibidir. UI (Kullanıcı Arayüzü) ve UX (Kullanıcı Deneyimi), birbirini tamamlayan süreçlerdir.</p><h2>UI (User Interface): Sitenin Elbisesi</h2><p>Sitenin dış görünüşünü temsil eder. Butonların rengi, boşlukların oranı (whitespace), görsellerin kalitesi, font hiyerarşisi... Ziyaretçi web sitenize girdiğinde oluşan o ilk 0.05 saniyelik \"Güven Hissi\" UI tasarımının sorumluluğundadır.</p><h2>UX (User Experience): Sitenin Aklı</h2><p>Müşteri ürünü sepete eklerken zorlanıyor mu? Aradığı bilgiye 3 tıklamada ulaşabiliyor mu? Yönlendirmeler akıcı mı? UX tasarımı estetikten ziyade analitik ve psikolojik bir süreçtir. Kullanıcının yolculuğunu pürüzsüz hale getirir.</p><div class=\"cta-in-post\"><h4>Kusursuz Kullanıcı Yolculuğu İnşa Edelim</h4><p>Müşteriyi kaçıran pürüzleri yok eden satış odaklı tasarım sistemlerimizle cironuzu artırın.</p><a href=\"#contact\" class=\"btn-primary btn-close-from-post\">Yol Haritası Çıkarın</a></div><h2>Sonuç</h2><p>Güçlü bir UI müşteriyi çeker, ancak dönüşümü yani satışı tamamlayan şey her zaman iyi tasarlanmış bir UX mimarisidir.</p>"
+    },
+    {
+      "id": "4",
+      "date": "2026-04-18T11:45:00Z",
+      "title": "E-Ticarette Dönüşüm Oranı (Conversion Rate) Nasıl Artırılır?",
+      "summary": "Sitenize çok trafik gelmesine rağmen satış olmuyorsa problemin ana kaynağı dönüşüm oranı kaybıdır.",
+      "author": "Emrullah Yiğitler",
+      "content": "<h2>Trafik Var, Satış Yok: Kabus Senaryosu</h2><p>Her gün binlerce TL dijital reklam bütçesi harcıyor, binlerce kullanıcıyı sitenize çekiyorsunuz ancak ciro yerinde mi sayıyor? İşte bu problemin çözümü CRO'dur (Conversion Rate Optimization).</p><h2>One-Step Checkout (Basit Ödeme Sayfaları)</h2><p>Müşterinin sepeti terk etme oranı en yüksek adım adres ve ödeme ekranıdır. Sayfalar arası dolaştıran uzun formlar yerine; adres, kargo ve kart bilgilerinin tek sayfa içinde şık bloklarla bitirilebildiği sistemler ciroyu anında %15-20 arası artırır.</p><h2>Mobil Öncelikli Altyapı Kaygısı</h2><p>E-ticaret alışverişlerinin %80'inden fazlası mobilden yapılıyor. Masaüstünde harika pürüzsüz kayan görseller, telefonda hantal yükleniyorsa o müşteri sepetini bırakacaktır.</p><h2>Güven(Trust) Sinyalleri</h2><p>Banka logoları, 256-bit SSL güvenlik damgaları, ürünün hemen detayındaki kargo bilgisi (\"Bugün kargoda\") ve kullanıcı yorumları. Bunlar ziyaretçinin beynindeki tereddüt butonlarını kapatan temel unsurlardır.</p><div class=\"cta-in-post\"><h4>Satış Makinesi Kurma Vakti</h4><p>Ürünlerinizi rapora değil kara dönüştürecek özel e-ticaret altyapıları için buradayız.</p><a href=\"#contact\" class=\"btn-primary btn-close-from-post\">Bize Ulaşın</a></div>"
+    },
+    {
+      "id": "5",
+      "date": "2026-04-20T16:00:00Z",
+      "title": "SEO Uyumlu Web Sitesi Ne Demektir?",
+      "summary": "Google'da reklam vermeden organik olarak ilk sayfada çıkmak tesadüf değildir. Teknik ve İçerik SEO'sunun gizemi.",
+      "author": "Emrullah Yiğitler",
+      "content": "<h2>1. Sayfada Yoksanız, Gerçekte de Yoksunuz</h2><p>Tüketicilerin ezici bir çoğunluğu aradıkları kelimelerde Google'ın sadece ilk sayfasındaki firmaları tercih ediyor. SEO tam olarak burada başlar.</p><h2>Teknik SEO: Sitenin Sağlık Raporu</h2><p>Teknik SEO dışarıdan gözle görülmez. Sunucunuzun hızlı yanıt vermesi, resimlerin yeni nesil .webp formatına dönüştürülmesi (boyut minimizasyonu), SSL sertifikasının sorunsuz çalışması ve site haritasının Google'a anlık yollanması gibi süreçleri barındırır.</p><h2>Core Web Vitals Testleri</h2><p>Google'ın en son performans algoritmasıdır. LCP (En büyük içeriğin yüklenme süresi) ve CLS (Ekrandaki tasarım kaymaları) direkt olarak sizin SEO skorunuzu belirler. Intergenz altyapısı, Google'ın bu katı kriterlerinden %100 tam puan alacak şekilde kodlanır.</p><h2>İçerik Stratejisi</h2><p>Doğru anahtar kelimeleri bloglarınızda ve ürün başlıklarınızda geçirebilmek hedef kitlenizi reklam harcaması yapmadan sitenize getirir.</p><div class=\"cta-in-post\"><h4>Arama Rakiplerinizi Geçin</h4><p>Temeli SEO'ya %100 uyumlu kodlanmış sistemlerle marka bilinirliğinizi artırın.</p><a href=\"#contact\" class=\"btn-outline btn-close-from-post\">Sistemimizi Öğrenin</a></div>"
+    },
+    {
+      "id": "6",
+      "date": "2026-04-22T08:30:00Z",
+      "title": "Kurumsal Kimlik Kitapçığı (Brand Guidelines) Neden Gereklidir?",
+      "summary": "Şirket büyüdükçe markanın kontrolünü sağlamak zorlaşır. Kurumsal kimlik kılavuzu size standart katar.",
+      "author": "Emrullah Yiğitler",
+      "content": "<h2>Tutarlılık Şirketin Değerini Belirler</h2><p>Şirket büyüdükçe pazarlamadan ürüne, her departmanın kafasına göre farklı ambalaj, sunum tasarımı veya e-posta imzası kullanması markanın profesyonelliğini zamanla eritir.</p><h2>Brand Guidelines (Marka Kılavuzu) İşlevi</h2><p>Marka kılavuzu, o şirketin anayasasıdır. Marka logosunun enstantane ölçüleri ne olmalı? Hangi hex kodlu turunculuk kullanılmalı? Yazılar Helvetica mı yoksa Roboto pto mu olmalı? Hepsi bu detaylı kitapçıkta yer alır.</p><h2>Ajans ve Organizasyonlar</h2><p>Yeni bir reklam ajansıyla veya matbaayla çalışmaya başladığınızda, onlara günlerce anlatmak yerine sadece Kurumsal Kimlik Kılavuzunu verirsiniz. Matbaanız da, sosyal medya uzmanınız da markayı aynı global standartta temsil etmeye devam eder.</p>"
     }
   ]
 }
