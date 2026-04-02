@@ -46,8 +46,8 @@ header.scrolled { background: var(--bg-card); backdrop-filter: blur(16px); -webk
 .logo span { background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .nav-links { display: flex; gap: 20px; align-items: center; }
 .nav-links a { font-size: 15px; font-weight: 600; transition: color 0.3s ease; position: relative; }
-.nav-links a:hover { color: var(--accent-blue); }
-
+.nav-links a:hover, .nav-links a.active { color: var(--accent-blue); }
+.nav-links a.active::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background: var(--gradient-primary); border-radius: 2px; }
 .btn-primary, .btn-secondary, .btn-outline { border-radius: 50px; font-weight: 600; display: inline-block; text-align: center; }
 .btn-primary { background: var(--accent-grad); color: #fff; padding: 12px 28px; border: none; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(157, 78, 221, 0.4); }

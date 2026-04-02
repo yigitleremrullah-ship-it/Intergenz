@@ -213,7 +213,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* --- Wizard Form (Multi-step) --- */
+    /* --- Scroll Spy & Smooth Scroll --- */
+    const sections = document.querySelectorAll('section[id]');
+    const spyLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    
+    // Smooth scroll for nav links (existing behavior enhanced)
+    spyLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if(link.getAttribute('href') === '#') return; // let logo be ignored or custom
+            e.preventDefault();
+            const targetId = document.querySelector(link.getAttribute('href'));
+            if(targetId) {
+                window.scrollTo({
+                    top: targetId.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // Scroll Spy Observer
+    const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                spyLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + entry.target.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+
+    sections.forEach(sec => spyObserver.observe(sec));
+
+    /* --- Wizard Form (Multi-step) & Dynamic Budget Logic --- */
     const wizardForm = document.querySelector('.wizard-form');
     if (wizardForm) {
         const steps = wizardForm.querySelectorAll('.wizard-step');
@@ -221,6 +258,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevBtns = wizardForm.querySelectorAll('.btn-prev');
         const progressBar = document.getElementById('wizard-progress-bar');
         
+        // Dynamic Budget Inputs Masking
+        const serviceRadios = wizardForm.querySelectorAll('input[name="service"]');
+        const budgetLowCard = document.getElementById('budget_low_tier');
+        const budgetRadioLow = document.getElementById('budget_radio_low');
+        const budgetRadioMid = document.getElementById('budget_radio_mid');
+
+        if(serviceRadios.length > 0) {
+            serviceRadios.forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'e_ticaret' || e.target.value === 'ozel_yazilim') {
+                        if(budgetLowCard) {
+                            budgetLowCard.style.display = 'none';
+                            if(budgetRadioLow && budgetRadioLow.checked) {
+                                if(budgetRadioMid) budgetRadioMid.checked = true;
+                            }
+                        }
+                    } else {
+                        if(budgetLowCard) {
+                            budgetLowCard.style.display = 'block';
+                        }
+                    }
+                });
+            });
+        }
+
         let currentStep = 0; // 0 indexten başlar (1. Adım)
         
         const updateWizard = () => {
