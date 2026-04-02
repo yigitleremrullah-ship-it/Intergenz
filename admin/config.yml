@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # Deponuzun ana şube ismi (master veya main olabilir)
+  branch: main # Deponuzun ana şube ismi
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -18,7 +18,7 @@ collections:
           - {label: "Vurgulu Başlık (Örn: İmzanızı)", name: "title_highlight", widget: "string"}
           - {label: "Alt Başlık (Örn: Birlikte Atalım)", name: "title_part_2", widget: "string"}
   
-  # Blog Yönetimi (Tek Dosya, Liste İçerik - Vanilla JS ile okunabilirlik için)
+  # Blog Yönetimi (JSON Listesi Olarak)
   - name: "blogs"
     label: "Bloglar / Yazılar"
     files:
@@ -30,8 +30,10 @@ collections:
             label: "Yazılar Listesi"
             widget: "list"
             fields:
+              - {label: "Benzersiz Adres ID (Örn: web-tasarim-nedir)", name: "id", widget: "string"}
               - {label: "Yazı Başlığı", name: "title", widget: "string"}
-              - {label: "Yazı Özeti", name: "summary", widget: "text"}
+              - {label: "Yazı Özeti (Kartlar için)", name: "summary", widget: "text"}
               - {label: "Yazar", name: "author", widget: "string", default: "Emrullah Yiğitler"}
               - {label: "Tarih", name: "date", widget: "datetime"}
-              - {label: "Görsel", name: "thumbnail", widget: "image", required: false}
+              - {label: "Yazı İçeriği (Yazıya özel başlıkları H2 seçiniz)", name: "content", widget: "markdown"}
+              - {label: "Görsel (İsteğe Bağlı)", name: "thumbnail", widget: "image", required: false}
