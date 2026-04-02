@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergenz | Premium Dijital Çözümler</title>
+    <meta name="description" content="Intergenz - Emrullah Yiğitler yönetimiyle premium web tasarım ve özel geliştirme ajansı. Geleceğin dijital dünyasını tasarlıyoruz.">
+    <!-- Open Graph (SEO & Social Sharing) -->
+    <meta property="og:title" content="Intergenz | Premium Dijital Çözümler">
+    <meta property="og:description" content="A'dan Z'ye premium web tasarım, e-ticaret ve özel yazılım çözümleri. Dijital dünyadaki imzanızı birlikte atalım.">
+    <meta property="og:image" content="https://intergenz.com/portfolio_landing_3.png">
+    <meta property="og:url" content="https://intergenz.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Netlify Identity (Decap CMS) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <h2 class="logo">INTER<span>GENZ</span></h2>
+            <div class="loading-bar"><div class="loading-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Gürültü/Noise Katmanı (Premium hissiyat için) -->
+    <div class="noise-bg"></div>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/905399328254?text=Merhaba%20Emrullah%20Bey,%20Intergenz%20üzerinden%20bir%20proje%20hakkında%20görüşmek%20istiyorum." target="_blank" class="float-widget">
+        <span class="float-icon">☕</span>
+        <span class="float-text">Hemen Kahve İçelim</span>
+    </a>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                INTER<span>GENZ</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#hero">Ana Sayfa</a>
+                <a href="#about">Hakkımızda</a>
+                <a href="#process">Süreç</a>
+                <a href="#services">Paketler</a>
+                <a href="#portfolio">Portfolyo</a>
+                <a href="#blog">Yazılar</a>
+                <a href="#contact" class="btn-outline">İletişim</a>
+                <!-- Tema Geçiş Düğmesi -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="moon-icon">🌙</span>
+                    <span class="sun-icon">☀️</span>
+                </button>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-glow"></div>
+        <div class="container hero-content-wrapper">
+            <div class="hero-content">
+                <h1 class="fade-in-up" id="hero-title">Dijital Dünyadaki <br><span class="gradient-text">İmzanızı </span> Birlikte Atalım</h1>
+                <p class="hero-subtitle fade-in-up delay-1">
+                    Biz sadece web sitesi yapmıyoruz, markanız için
+                    <span class="typewriter-text" id="typewriter"></span>
+                    yaratıyoruz.
+                </p>
+                <div class="hero-actions fade-in-up delay-2">
+                    <a href="#services" class="btn-primary">Hizmetlerimizi Keşfedin</a>
+                    <a href="#portfolio" class="btn-secondary">Çalışmalarımız</a>
+                </div>
+            </div>
+            <!-- Lottie Animation Container -->
+            <div id="lottie-hero" class="hero-animation fade-in-up delay-1"></div>
+        </div>
+    </section>
+
+    <!-- Hız Rozeti (Speed Showcase) & Tech Stack Marquee -->
+    <div class="speed-and-tech-wrapper section-padding">
+        <div class="container">
+            <!-- Speed Showcase -->
+            <div class="speed-badge reveal">
+                <div class="speed-ring">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <path class="circle"
+                          stroke-dasharray="0, 100"
+                          id="speed-circle-path"
+                          d="M18 2.0845
+                            a 15.9155 15.9155 0 0 1 0 31.831
+                            a 15.9155 15.9155 0 0 1 0 -31.831"
+                        />
+                        <text x="18" y="20.35" class="percentage">100</text>
+                    </svg>
+                </div>
+                <div class="speed-info">
+                    <h4>Optimum Hız, Sıfır Gecikme</h4>
+                    <p>PageSpeed performansı %100 / Yüklenme: <strong class="accent-text">0.8s</strong><br><em>Optimized by Intergenz</em></p>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Marquee -->
+            <div class="tech-marquee reveal delay-1">
+                <div class="marquee-track">
+                    <!-- Sonsuz dönmesi için içerik tekrar edilecek -->
+                    <div class="marquee-items">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Vercel</span>
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <!-- Kopyalar -->
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Vercel</span>
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">GraphQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hakkımızda Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <h2 class="section-title">Biz <span>Kimiz?</span></h2>
+                    <p>Intergenz olarak sıradanlıktan uzak, vizyoner ve kullanıcı deneyimini merkeze alan dijital ürünler geliştiriyoruz. Standart şablonlar değil, markanızın hikayesini yansıtan eşsiz tasarımlar sunuyoruz.</p>
+                    <p><strong>Emrullah Yiğitler</strong> liderliğinde, küçük işletmelerden kurumsal markalara kadar geniş bir yelpazede premium web hizmetleri üretiyoruz.</p>
+                    <div class="stats" id="stats">
+                        <div class="stat-item">
+                            <h3>+<span class="counter" data-target="15">0</span></h3>
+                            <p>Tamamlanan Proje</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>%<span class="counter" data-target="100">0</span></h3>
+                            <p>Müşteri Memnuniyeti</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>24/7</h3>
+                            <p>Teknik Destek</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card glass reveal right">
+                    <div class="card-glow"></div>
+                    <div class="profile-pic">
+                        <span>E</span>
+                    </div>
+                    <h3>Emrullah Yiğitler</h3>
+                    <h4>Kurucu & Baş Geliştirici</h4>
+                    <p>"Tasarım sadece nasıl göründüğü değil, nasıl çalıştığıdır. Müşterileriniz için en iyi dijital deneyimi kurguluyoruz."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sureç (Process Timeline) Section -->
+    <section id="process" class="process section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Proje <span>Sürecimiz</span></h2>
+                <p>Fikrinizden yayına kadar, her adımı şeffaf ve profesyonelce yönetiyoruz.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-line">
+                    <div class="timeline-line-fill" id="timeline-fill"></div>
+                </div>
+                
+                <div class="timeline-item reveal right">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-content glass">
+                        <h3>Keşif & Strateji</h3>
+                        <p>İhtiyaçlarınızı dinliyor, markanızı ve rakiplerinizi analiz edip en uygun dijital yol haritasını çiziyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal left">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content glass">
+                        <h3>UI/UX Tasarım</h3>
+                        <p>Kullanıcı etkileşimini artıracak, modern, estetik ve premium bir görsel arayüz (UI) tasarlıyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal right">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content glass">
+                        <h3>Geliştirme (Kodlama)</h3>
+                        <p>Tasarımı, en güncel web teknolojileri ve temiz kod altyapısı ile hayata geçiriyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal left">
+                    <div class="timeline-dot">4</div>
+                    <div class="timeline-content glass">
+                        <h3>Test & Optimizasyon</h3>
+                        <p>Mobil uyumluluk, hız (SEO) ve güvenlik testlerini yaparak tüm cihazlarda kusursuz çalışmasını sağlıyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal right">
+                    <div class="timeline-dot">5</div>
+                    <div class="timeline-content glass">
+                        <h3>Yayına Alım & Destek</h3>
+                        <p>Sitenizi sunucuya taşıyor ve yayına alıyoruz. Gerekli durumlarda teknik destek vermeye devam ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paketler/Servisler Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Premium <span>Paketler</span></h2>
+                <p>İhtiyacınıza uygun, anahtar teslim çözümlerden birini seçin ve hemen başlayalım.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Paket 1 -->
+                <div class="pricing-card glass reveal">
+                    <div class="package-name">Başlangıç Sürümü</div>
+                    <div class="price">₺5.000</div>
+                    <p class="desc">Bireysel profesyoneller ve küçük işletmeler için ideal başlangıç.</p>
+                    <ul class="features">
+                        <li><span>✔</span> Premium Tek Sayfa (One-Page) Tasarım</li>
+                        <li><span>✔</span> Mobil Uyumlu (Responsive)</li>
+                        <li><span>✔</span> Temel SEO Optimizasyonu</li>
+                        <li><span>✔</span> İletişim Formu & Harita</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline full-width">Bunu Seç</a>
+                </div>
+
+                <!-- Paket 2 -->
+                <div class="pricing-card glass popular reveal delay-1">
+                    <div class="popular-badge">En Çok Tercih Edilen</div>
+                    <div class="card-glow"></div>
+                    <div class="package-name">Kurumsal Prestij</div>
+                    <div class="price">₺12.500</div>
+                    <p class="desc">Markasına değer katmak isteyen orta ve büyük işletmeler için tasarlandı.</p>
+                    <ul class="features">
+                        <li><span>✔</span> 5-7 Sayfa Çoklu Yapı</li>
+                        <li><span>✔</span> Özel UI/UX Tasarım</li>
+                        <li><span>✔</span> Gelişmiş SEO & Hızlı Yüklenme</li>
+                        <li><span>✔</span> Yönetim Paneli (CMS)</li>
+                        <li><span>✔</span> 1 Yıllık Ücretsiz Destek</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary full-width">Bunu Seç</a>
+                </div>
+
+                <!-- Paket 3 -->
+                <div class="pricing-card glass reveal delay-2">
+                    <div class="package-name">Özel Proje & E-Ticaret</div>
+                    <div class="price">₺25.000+</div>
+                    <p class="desc">A'dan Z'ye özel yazılım gerektiren ve online satış yapacak markalar.</p>
+                    <ul class="features">
+                        <li><span>✔</span> E-Ticaret Altyapısı</li>
+                        <li><span>✔</span> Sınırsız Ürün Ekleme</li>
+                        <li><span>✔</span> Sanal POS Entegrasyonu</li>
+                        <li><span>✔</span> Karmaşık Veritabanı Mimarisi</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline full-width">Teklif Al</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolyo Section -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Seçkin <span>Çalışmalarımız</span></h2>
+                <p>Neler yapabileceğimizin küçük bir fragmanı.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item glass reveal">
+                    <div class="portfolio-img" style="background-image: url('portfolio_web_1.png');"></div>
+                    <div class="portfolio-info">
+                        <h3>Lüks E-Ticaret Deneyimi</h3>
+                        <p>Web Geliştirme & UI/UX</p>
+                    </div>
+                </div>
+                <div class="portfolio-item glass reveal delay-1">
+                    <div class="portfolio-img" style="background-image: url('portfolio_dash_2.png');"></div>
+                    <div class="portfolio-info">
+                        <h3>Finans Yönetim Paneli</h3>
+                        <p>Dashboard Tasarımı</p>
+                    </div>
+                </div>
+                <div class="portfolio-item glass reveal delay-2">
+                    <div class="portfolio-img" style="background-image: url('portfolio_landing_3.png');"></div>
+                    <div class="portfolio-info">
+                        <h3>Dijital Ajans Sayfası</h3>
+                        <p>Kurumsal Kimlik & Web</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Yazılar Section -->
+    <section id="blog" class="blog section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Güncel <span>İçgörüler</span></h2>
+                <p>Dijital dünyaya dair sektörel ipuçları (İçerikler CMS'ten yönetilmektedir).</p>
+            </div>
+            <div class="blog-grid reveal delay-1" id="blog-grid">
+                <!-- Data Gelene Kadar Gösterilecek Skeleton Loaders -->
+                <div class="blog-card glass skeleton-card">
+                    <div class="skeleton skeleton-text skeleton-date"></div>
+                    <div class="skeleton skeleton-text skeleton-title"></div>
+                    <div class="skeleton skeleton-text skeleton-desc" style="height: 40px;"></div>
+                    <div class="skeleton skeleton-text skeleton-author"></div>
+                </div>
+                <div class="blog-card glass skeleton-card delay-1">
+                    <div class="skeleton skeleton-text skeleton-date"></div>
+                    <div class="skeleton skeleton-text skeleton-title"></div>
+                    <div class="skeleton skeleton-text skeleton-desc" style="height: 40px;"></div>
+                    <div class="skeleton skeleton-text skeleton-author"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Müşteri Yorumları Section -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Müşterilerimiz <span>Ne Diyor?</span></h2>
+                <p>Bizimle çalışan markaların memnuniyeti en büyük referansımızdır.</p>
+            </div>
+            <div class="testimonials-slider reveal delay-1">
+                <div class="testimonial-card glass">
+                    <p class="quote">"Intergenz vizyonumuzu tam olarak anladı ve kelimenin tam anlamıyla harika bir iş çıkardı. Sitemiz satışlarımızı %40 artırdı."</p>
+                    <div class="client-info">
+                        <strong>Ahmet Y.</strong> - Startup Kurucusu
+                    </div>
+                </div>
+                <div class="testimonial-card glass">
+                    <p class="quote">"Daha önce birçok ajansla çalıştık ama Emrullah Bey'in detaylara ve estetiğe verdiği önem muazzam. Kesinlikle tavsiye ederim."</p>
+                    <div class="client-info">
+                        <strong>Selin M.</strong> - E-Ticaret Müdürü
+                    </div>
+                </div>
+                <div class="testimonial-card glass">
+                    <p class="quote">"Premium hissini gerçekten yansıtıyor. Modern bir kurumsal kimliğe sahip olduk, süreç iletişimi inanılmaz rahattı."</p>
+                    <div class="client-info">
+                        <strong>Burak K.</strong> - Fintech CEO
+                    </div>
+                </div>
+            </div>
+            
+            <div class="client-logos reveal delay-2">
+                <div class="logo-item">TechVision</div>
+                <div class="logo-item">GlowBeauty</div>
+                <div class="logo-item">FinancePro</div>
+                <div class="logo-item">NextGen AI</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ / SSS Section -->
+    <section id="faq" class="faq section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Sıkça Sorulan <span>Sorular</span></h2>
+                <p>Sürecimiz ve hizmetlerimiz hakkında merak ettikleriniz.</p>
+            </div>
+            <div class="faq-container reveal delay-1">
+                <div class="faq-accordion glass">
+                    <div class="faq-question">
+                        <h4>Domain ve Hosting fiyata dahil mi?</h4>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Premium ve Özel Proje paketlerimizde 1 yıllık ücretsiz domain (alan adı) ve premium hosting sağlıyoruz. Başlangıç paketinde size bu konuda ücretsiz destek ve yönlendirme yapıyoruz.</p>
+                    </div>
+                </div>
+                <div class="faq-accordion glass">
+                    <div class="faq-question">
+                        <h4>Revize hakkım var mı?</h4>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Elbette! Tasarım onay aşamasında tasarımla ilgili sınırsız revize sunuyoruz. Geliştirme (kodlama) tamamlandıktan sonra minör düzenlemelerde her zaman destek veriyoruz.</p>
+                    </div>
+                </div>
+                <div class="faq-accordion glass">
+                    <div class="faq-question">
+                        <h4>Sitem Google'da (SEO) iyi sıralama alır mı?</h4>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kod yapımızı en son SEO standartlarına göre (hızlı yüklenme, schema yapıları, doğru etiketleme) inşa ediyoruz. Bu da organik olarak sitenizin arama motorlarında hızlıca yükselmesine büyük katkı sağlar.</p>
+                    </div>
+                </div>
+                <div class="faq-accordion glass">
+                    <div class="faq-question">
+                        <h4>Proje teslim süresi ortalama ne kadardır?</h4>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Başlangıç projeleri genelde 5-7 iş günü, kurumsal projeler 2-3 hafta, özel yazılımlı projeler ise kapsamına göre tarafınıza net bir takvim sunularak tamamlanmaktadır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section id="roi" class="roi-section section-padding">
+        <div class="container">
+            <div class="roi-wrapper glass reveal">
+                <div class="roi-inputs">
+                    <h2 class="section-title" style="text-align: left; font-size: 32px;">Kazanç <span>Potansiyeliniz</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 30px;">Kötü bir tasarım müşteriyi kaçırır. Sadece dönüşüm oranınızı (%1'den %4'e) çıkartarak elde edeceğiniz ekstra ciroyu görün!</p>
+                    
+                    <div class="slider-group">
+                        <label>Aylık Ziyaretçi Sayınız: <span id="visitor-val" class="accent-text">10.000</span></label>
+                        <input type="range" id="visitor-slider" class="styled-slider" min="1000" max="100000" step="1000" value="10000">
+                    </div>
+                    <div class="slider-group">
+                        <label>Ortalama Bir Satışınızın Tutarı (₺): <span id="order-val" class="accent-text">500 ₺</span></label>
+                        <input type="range" id="order-slider" class="styled-slider" min="50" max="10000" step="50" value="500">
+                    </div>
+                </div>
+                <div class="roi-result-card">
+                    <div class="card-glow"></div>
+                    <div class="roi-old">
+                        <span>Standart Siteler (%1 Dönüşüm)</span>
+                        <div class="old-amount" id="old-rev">50.000 ₺</div>
+                    </div>
+                    <div class="roi-intergenz">
+                        <span>Intergenz Altyapısı (%4 Dönüşüm)</span>
+                        <div class="neon-amount" id="new-rev">200.000 ₺</div>
+                    </div>
+                    <p class="roi-note">* Bu hesaplama sektörel ortalamalar baz alınarak "Yatırım Getirisi" beklentilerini göstermek amaçlıdır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim / Dinamik Sihirbaz Form -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper glass reveal">
+                <!-- Multi-step Form -->
+                <div class="contact-form-container wizard-container">
+                    <h2 class="section-title">Projeyi <span>Başlat</span></h2>
+                    
+                    <form name="proje_teklif_formu" method="POST" data-netlify="true" class="contact-form wizard-form">
+                        <!-- Netlify Identity Field -->
+                        <input type="hidden" name="form-name" value="proje_teklif_formu" />
+                        
+                        <!-- Progress Bar -->
+                        <div class="wizard-progress">
+                            <div class="progress-bar" id="wizard-progress-bar"></div>
+                        </div>
+
+                        <!-- Adım 1: Hizmet Seçimi -->
+                        <div class="wizard-step active" data-step="1">
+                            <p class="step-title">1. Hangi hizmetle ilgileniyorsunuz?</p>
+                            <div class="service-options">
+                                <label class="radio-card">
+                                    <input type="radio" name="service" value="web_tasarim" checked>
+                                    <span class="card-content">Düzenli Kurumsal Web Sitesi</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="service" value="e_ticaret">
+                                    <span class="card-content">E-Ticaret / Satış Platformu</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="service" value="ozel_yazilim">
+                                    <span class="card-content">Özel Web Uygulaması / SaaS</span>
+                                </label>
+                            </div>
+                            <div class="wizard-actions">
+                                <div></div>
+                                <button type="button" class="btn-outline btn-next">İleri</button>
+                            </div>
+                        </div>
+
+                        <!-- Adım 2: Bütçe -->
+                        <div class="wizard-step" data-step="2">
+                            <p class="step-title">2. Projeniz için öngördüğünüz bütçe aralığı (₺)?</p>
+                            <div class="budget-options">
+                                <label class="radio-card">
+                                    <input type="radio" name="budget" value="0-5k" checked>
+                                    <span class="card-content">0₺ - 10.000₺</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="budget" value="10k-25k">
+                                    <span class="card-content">10.000₺ - 25.000₺</span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="budget" value="25k+">
+                                    <span class="card-content">25.000₺+ (Özel Proje)</span>
+                                </label>
+                            </div>
+                            <div class="wizard-actions">
+                                <button type="button" class="btn-secondary btn-prev">Geri</button>
+                                <button type="button" class="btn-outline btn-next">İleri</button>
+                            </div>
+                        </div>
+
+                        <!-- Adım 3: İletişim Detayları -->
+                        <div class="wizard-step" data-step="3">
+                            <p class="step-title">3. Son olarak bilgilerinizi paylaşır mısınız?</p>
+                            <div class="input-group">
+                                <input type="text" name="isim_soyad" placeholder="Adınız Soyadınız" required>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" name="email_adres" placeholder="E-posta Adresiniz" required>
+                            </div>
+                            <div class="input-group">
+                                <textarea name="proje_detayi" rows="3" placeholder="Projenizi biraz anlatır mısınız?" required></textarea>
+                            </div>
+                            <div class="wizard-actions">
+                                <button type="button" class="btn-secondary btn-prev">Geri</button>
+                                <button type="submit" class="btn-primary">Teklif Al / Gönder</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <div class="badge"><span class="icon">🔒</span> %100 Güvenli Altyapı</div>
+                        <div class="badge"><span class="icon">☁️</span> Cloud Sunucu Erişimi</div>
+                        <div class="badge"><span class="icon">⚡</span> Uçtan Uca Şifreleme</div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-container">
+                    <div class="info-details">
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p>hello@intergenz.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Telefon</h4>
+                            <p>0539 932 82 54</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Konum</h4>
+                            <p>Uzunsokak, Trabzon / Türkiye</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps?q=Trabzon+Uzun+Sokak&output=embed" 
+                            width="100%" height="100%" style="border:0; border-radius: 12px; filter: invert(90%) hue-rotate(180deg) contrast(80%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                INTER<span>GENZ</span>
+            </div>
+            <div class="footer-links">
+                <a href="#about">Hakkımızda</a>
+                <a href="#process">Süreç</a>
+                <a href="#services">Hizmetler</a>
+                <a href="#portfolio">Portfolyo</a>
+                <a href="#faq">SSS</a>
+            </div>
+            <!-- Sosyal Medya İkonları -->
+            <div class="footer-socials">
+                <a href="#" target="_blank" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#" target="_blank" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="#" target="_blank" aria-label="Behance">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M22 7h-7v2h7v-2zm1.75 3c-.11-.59-.36-1.12-.72-1.57-.49-.62-1.14-1.07-1.89-1.3-.64-.2-1.33-.23-1.99-.08-.66.15-1.28.45-1.81.87-.27.21-.52.45-.73.72M8.1 14.86c-.52.28-1.1.43-1.69.44H3v-4.63h3.35c.61.02 1.21.2 1.7.53.4.27.7.67.84 1.13.1.34.1.71 0 1.05-.13.56-.47 1.06-.99 1.39m1.28-4.4c.5-1.05.51-2.28.04-3.34-.34-.76-.89-1.4-1.59-1.82C7.14 4.88 6.31 4.63 5.46 4.5H0v15h5.83c1.07-.06 2.11-.4 2.97-1 .76-.52 1.34-1.25 1.63-2.14.28-.86.28-1.78.02-2.65-.24-.8-.71-1.5-1.35-2.02.66-.4 1.19-1.01 1.49-1.74m12.39 1.54h-7.85c.01 1.36.27 2.44.8 3.23.44.66 1.1 1.16 1.87 1.4.67.2 1.38.2 2.05-.01.55-.16 1.05-.48 1.44-.92l1.69 1.3c-.64.8-1.46 1.43-2.4 1.8-.93.36-1.93.45-2.91.26-.84-.16-1.63-.55-2.27-1.13-.7-.63-1.21-1.43-1.48-2.34-.34-1.14-.38-2.35-.12-3.5.21-.92.65-1.77 1.28-2.46.73-.79 1.66-1.35 2.69-1.63s2.11-.27 3.12-.01c.96.25 1.83.77 2.5 1.48.59.62 1.01 1.39 1.21 2.24.16.68.18 1.39.06 2.08l-.05.15zM17.15 9.77c-.55-.24-1.17-.24-1.72 0-.49.2-.9.55-1.17 1H20.1c-.24-.48-.68-.82-1.19-1-.54-.26-1.17-.26-1.72 0l-.04.03z"/></svg>
+                </a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 Intergenz & Emrullah Yiğitler. Tüm hakları gizlidir.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lottie Web Player -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    
+    <!-- Netlify Identity Config for CMS redirection -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main # Deponuzun ana şube ismi (master veya main olabilir)
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  # Ana Sayfa Ayarları (Tekli Dosya)
+  - name: "settings"
+    label: "Site Ayarları"
+    files:
+      - file: "content/settings.json"
+        name: "general"
+        label: "Ana Sayfa Başlığı"
+        fields:
+          - {label: "Üst Başlık (Örn: Dijital Dünyadaki)", name: "title_part_1", widget: "string"}
+          - {label: "Vurgulu Başlık (Örn: İmzanızı)", name: "title_highlight", widget: "string"}
+          - {label: "Alt Başlık (Örn: Birlikte Atalım)", name: "title_part_2", widget: "string"}
+  
+  # Blog Yönetimi (Tek Dosya, Liste İçerik - Vanilla JS ile okunabilirlik için)
+  - name: "blogs"
+    label: "Bloglar / Yazılar"
+    files:
+      - file: "content/blogs.json"
+        name: "blog_list"
+        label: "Tüm Yazılar"
+        fields:
+          - name: "posts"
+            label: "Yazılar Listesi"
+            widget: "list"
+            fields:
+              - {label: "Yazı Başlığı", name: "title", widget: "string"}
+              - {label: "Yazı Özeti", name: "summary", widget: "text"}
+              - {label: "Yazar", name: "author", widget: "string", default: "Emrullah Yiğitler"}
+              - {label: "Tarih", name: "date", widget: "datetime"}
+              - {label: "Görsel", name: "thumbnail", widget: "image", required: false}
