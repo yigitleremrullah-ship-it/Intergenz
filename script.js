@@ -415,26 +415,23 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.log('CMS settings loading fallback.'));
 
-    /* --- Fetch CMS Blogs & Modal Logic --- */
-    let allPostsData = [];
+    /* --- Fetch CMS Blogs & Layout --- */
     fetch('content/blogs.json')
         .then(res => res.json())
         .then(data => {
             const blogGrid = document.getElementById('blog-grid');
             if(blogGrid && data.posts && data.posts.length > 0) {
-                allPostsData = data.posts;
                 let blogHTML = '';
                 data.posts.forEach((post, i) => {
                     const dateObj = new Date(post.date);
                     const dateStr = dateObj.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
-                    // Store logic by dataset ID
                     blogHTML += `
-                        <div class="blog-card glass" data-id="${post.id}" style="cursor:pointer;" onclick="openBlogModal('${post.id}')">
+                        <a href="blog-detail.html?id=${post.id}" class="blog-card glass" style="text-decoration:none; color:inherit; display:block; transition: transform 0.3s ease;">
                             <div class="blog-date" style="color:var(--accent-blue); font-size:14px; margin-bottom:10px;">${dateStr}</div>
                             <h3 style="margin-bottom:15px; font-size:20px;">${post.title}</h3>
-                            <p style="margin-bottom:20px;">${post.summary}</p>
+                            <p style="margin-bottom:20px; color:var(--text-muted);">${post.summary}</p>
                             <div class="blog-author" style="font-weight:600;">${post.author}</div>
-                        </div>
+                        </a>
                     `;
                 });
                 blogGrid.innerHTML = blogHTML;
@@ -442,85 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.log('CMS blogs loading fallback.'));
 
-    /* --- Blog Modal Controllers --- */
-    window.openBlogModal = function(postId) {
-        const post = allPostsData.find(p => p.id === postId);
-        if(!post) return;
 
-        const dateObj = new Date(post.date);
-        const dateStr = dateObj.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' });
-
-        document.getElementById('blog-modal-date').innerText = dateStr;
-        document.getElementById('blog-modal-title').innerText = post.title;
-        document.getElementById('blog-modal-author').innerText = `Yazar: ${post.author}`;
-        
-        const contentDiv = document.getElementById('blog-content-dynamic');
-        contentDiv.innerHTML = post.content;
-
-        // Auto Generate Table of Contents (TOC)
-        const tocList = document.getElementById('toc-list');
-        tocList.innerHTML = '';
-        const headings = contentDiv.querySelectorAll('h2');
-        if(headings.length > 0) {
-            headings.forEach((heading, idx) => {
-                // generate unique ID
-                const anchorId = 'heading-' + idx;
-                heading.id = anchorId;
-                
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = '#' + anchorId;
-                a.innerText = heading.innerText;
-                a.onclick = (e) => {
-                    e.preventDefault();
-                    document.querySelector('.blog-sidebar').scrollTo({
-                        top: heading.offsetTop - 50,
-                        behavior: 'smooth'
-                    });
-                };
-                li.appendChild(a);
-                tocList.appendChild(li);
-            });
-            document.getElementById('toc-container').style.display = 'block';
-        } else {
-            document.getElementById('toc-container').style.display = 'none';
-        }
-
-        // Attach specific CTA handlers inside post content
-        const internalCTAs = contentDiv.querySelectorAll('.btn-close-from-post');
-        internalCTAs.forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.getElementById('blog-modal-overlay').classList.remove('active');
-            });
-        });
-
-        // Show Modal
-        document.getElementById('blog-modal-overlay').classList.add('active');
-        document.querySelector('.blog-sidebar').scrollTop = 0; // reset scroll
-    };
-
-    const closeModalBtn = document.getElementById('close-blog');
-    const modalOverlay = document.getElementById('blog-modal-overlay');
-    if(closeModalBtn && modalOverlay) {
-        closeModalBtn.addEventListener('click', () => {
-            modalOverlay.classList.remove('active');
-        });
-        modalOverlay.addEventListener('click', (e) => {
-            if(e.target === modalOverlay) modalOverlay.classList.remove('active');
-        });
-    }
-
-    // Scroll Progress Logic inside Modal Sidebar
-    const blogSidebar = document.querySelector('.blog-sidebar');
-    const readingBar = document.getElementById('reading-bar');
-    if(blogSidebar && readingBar) {
-        blogSidebar.addEventListener('scroll', () => {
-            const scrollTop = blogSidebar.scrollTop;
-            const scrollHeight = blogSidebar.scrollHeight - blogSidebar.clientHeight;
-            const scrollPercent = (scrollTop / scrollHeight) * 100;
-            readingBar.style.width = scrollPercent + '%';
-        });
-    }
 
     /* --- ROI Calculator Logic --- */
     const visitorSlider = document.getElementById('visitor-slider');
