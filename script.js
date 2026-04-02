@@ -12,7 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- Theme Toggle (Dark/Light Mode) --- */
     const themeBtn = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme');
+    let currentTheme = localStorage.getItem('theme');
+    
+    // İşletim sisteminin temasını kontrol et (Otomatik Dark/Light mod)
+    if(!currentTheme) {
+        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        currentTheme = prefersLight ? 'light' : 'dark';
+        localStorage.setItem('theme', currentTheme);
+    }
+
     if (currentTheme === 'light') {
         document.body.classList.add('light-mode');
     }
@@ -307,6 +315,30 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             autoplay: true,
             path: 'https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json'
+        });
+    }
+
+    /* --- Process Lotties (P1 to P5) --- */
+    if(typeof lottie != 'undefined') {
+        const processAnimations = [
+            { id: 'lottie-p1', path: 'https://assets4.lottiefiles.com/packages/lf20_z01bika0.json' }, // Keşif
+            { id: 'lottie-p2', path: 'https://assets9.lottiefiles.com/packages/lf20_q5pk6p1k.json' }, // Tasarım
+            { id: 'lottie-p3', path: 'https://assets10.lottiefiles.com/packages/lf20_vnikrcia.json' }, // Kodlama
+            { id: 'lottie-p4', path: 'https://assets3.lottiefiles.com/packages/lf20_n2yhd0nx.json' }, // Test
+            { id: 'lottie-p5', path: 'https://assets3.lottiefiles.com/packages/lf20_touohxv0.json' }  // Yayın
+        ];
+
+        processAnimations.forEach(anim => {
+            const el = document.getElementById(anim.id);
+            if(el) {
+                lottie.loadAnimation({
+                    container: el,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: anim.path
+                });
+            }
         });
     }
 
